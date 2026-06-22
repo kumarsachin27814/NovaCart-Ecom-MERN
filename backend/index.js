@@ -9,7 +9,7 @@ connectDB();
 
 import authRoutes from './routes/authRoutes.js';
 import productRoutes from './routes/productRoutes.js'
-// import ordersRoutes from "./routes/ordersRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 // import paymentRoutes from "./routes/paymentRoutes.js";
 // import analyticsRoutes from "./routes/analyticsRoutes.js";
 
@@ -24,7 +24,7 @@ app.get("/" , (req , res) => {
 
 app.use('/api/auth' , authRoutes);
 app.use("/api/products", productRoutes);
-// app.use("/api/orders", ordersRoutes);
+app.use("/api/orders", orderRoutes);
 // app.use("/api/payment", paymentRoutes);
 // app.use("/api/analytics", analyticsRoutes);
 

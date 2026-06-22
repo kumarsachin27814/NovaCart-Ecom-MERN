@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import sendEmail from '../utils/sendEmail.js';
 
  const genToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "2d" });
+  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
  }
 // Register a new user
 
