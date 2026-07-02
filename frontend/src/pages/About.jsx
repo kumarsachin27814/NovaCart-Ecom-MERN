@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="about-page">
       <div className="about-hero">
-        <h1>About ShopNest</h1>
+        <h1>About NovaCart</h1>
         <p>
           Your trusted destination for premium products, secure shopping, and an
           exceptional online shopping experience.
@@ -16,7 +16,7 @@ function About() {
         <div className="about-card">
           <h2>Our Story</h2>
           <p>
-            ShopNest was created with one simple goal — to make online shopping
+            NovaCart was created with one simple goal — to make online shopping
             easy, reliable, and affordable. We carefully select products from
             trusted sellers so every customer receives quality products at
             competitive prices.
@@ -43,7 +43,7 @@ function About() {
           <div className="info-card">
             <h3> Quality First</h3>
             <p>
-              Every product listed on ShopNest is carefully reviewed to maintain
+              Every product listed on NovaCart is carefully reviewed to maintain
               high quality standards.
             </p>
           </div>
@@ -58,7 +58,7 @@ function About() {
         </div>
 
         <div className="about-card">
-          <h2>Why Choose ShopNest?</h2>
+          <h2>Why Choose NovaCart?</h2>
 
           <ul>
             <li>✔ Premium quality products</li>
@@ -74,7 +74,7 @@ function About() {
           <h2>Customer Commitment</h2>
 
           <p>
-            At ShopNest, every customer matters. We continuously improve our
+            At NovaCart, every customer matters. We continuously improve our
             platform to provide better services, transparent policies, and an
             enjoyable shopping journey from browsing to delivery.
           </p>

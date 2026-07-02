@@ -17,12 +17,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-brand">
         <Link to="/">
-          <img
-            src="/3.png"
-            alt="ShopNest Logo"
-            className="navbar-logo"
-          />
-          ShopNest
+          <img src="/NovaCart.jpeg" alt="NovaCartLogo" className="navbar-logo" />
+          NovaCart
         </Link>
       </div>
       <ul className="navbar-links">

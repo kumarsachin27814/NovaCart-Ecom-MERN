@@ -19,7 +19,7 @@ export const createOrder = async (req, res) => {
     const message = `
             Hello ${req.user.name},
 
-            Thank you for shopping with ShopNest! 🎉
+            Thank you for shopping with NovaCart! 🎉
 
             Your order has been placed successfully.
 
@@ -39,10 +39,10 @@ export const createOrder = async (req, res) => {
 
             We are preparing your order and will notify you once it has been shipped.
 
-            Thank you for choosing ShopNest.
+            Thank you for choosing NovaCart.
 
             Best Regards,
-            ShopNest Team
+            NovaCart Team
             `;
     await sendEmail(req.user.email, "Order Created", message);
     return res

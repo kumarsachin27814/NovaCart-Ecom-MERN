@@ -22,7 +22,7 @@ function Footer() {
         }}
       >
         <div>
-          <h3 style={{ color: "#F97316", marginBottom: "10px" }}>ShopNest</h3>
+          <h3 style={{ color: "#F97316", marginBottom: "10px" }}>NovaCart</h3>
           <p style={{ color: "#a1a1aa", fontSize: "0.9rem" }}>
             Premium E-Commerce Platform
           </p>
@@ -46,7 +46,7 @@ function Footer() {
         </div>
 
         <div style={{ color: "#a1a1aa", fontSize: "0.9rem" }}>
-          &copy; {new Date().getFullYear()} ShopNest. All rights reserved.
+          &copy; {new Date().getFullYear()} NovaCart. All rights reserved.
         </div>
       </div>
     </footer>

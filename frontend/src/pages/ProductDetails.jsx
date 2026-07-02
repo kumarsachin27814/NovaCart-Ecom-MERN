@@ -92,7 +92,7 @@ function ProductDetails() {
         <div className="detail-info">
           <h2>{product.name}</h2>
 
-          <p className="detail-price">${product.price.toFixed(2)}</p>
+          <p className="detail-price">₹{product.price.toFixed(2)}</p>
 
           <div className="detail-description">
             <h4>Product Description</h4>
@@ -105,10 +105,10 @@ function ProductDetails() {
           </button>
 
           <p
-            className={`stock ${product.stock > 0 ? "in-stock" : "out-stock"}`}
+            className={`stock {product.stock > 0 ? "in-stock" : "out-stock"}`}
           >
             {product.stock > 0
-              ? `In Stock (${product.stock} units available)`
+              ? `In Stock (₹{product.stock} units available)`
               : "Temporarily Out of Stock"}
           </p>
         </div>

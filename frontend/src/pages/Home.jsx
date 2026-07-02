@@ -10,7 +10,7 @@ const Home = () => {
        try {
          const res = await fetch("/api/products");
          const data = await res.json();
-         setProducts(data.slice(0, 4)); // Featured products
+         setProducts([...data].reverse());
        } catch (error) {
          console.error(error);
        } finally {
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-banner">
-        <h1>Welcome to ShopNest</h1>
+        <h1>Welcome to NovaCart</h1>
         <p>Discover the best products at unbeatable prices.</p>
       </div>
 

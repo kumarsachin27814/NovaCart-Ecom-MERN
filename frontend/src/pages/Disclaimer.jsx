@@ -7,7 +7,7 @@ function Disclaimer() {
       <div className="disclaimer-hero">
         <h1>Disclaimer</h1>
         <p>
-          Please read this disclaimer carefully before using ShopNest. By
+          Please read this disclaimer carefully before using NovaCart. By
           accessing our website, you agree to the terms outlined below.
         </p>
       </div>
@@ -16,7 +16,7 @@ function Disclaimer() {
         <div className="disclaimer-card">
           <h2>📌 General Information</h2>
           <p>
-            The information available on ShopNest is provided for general
+            The information available on NovaCart is provided for general
             informational purposes only. While we strive to keep all information
             accurate and up to date, we make no warranties regarding its
             completeness, reliability, or accuracy.
@@ -46,7 +46,7 @@ function Disclaimer() {
             <h3>🔗 Third-Party Links</h3>
             <p>
               Our website may include links to third-party websites for your
-              convenience. ShopNest is not responsible for the content,
+              convenience. NovaCart is not responsible for the content,
               policies, or practices of external websites.
             </p>
           </div>
@@ -54,7 +54,7 @@ function Disclaimer() {
           <div className="info-card">
             <h3>⚖ Limitation of Liability</h3>
             <p>
-              ShopNest shall not be held responsible for any direct, indirect,
+              NovaCart shall not be held responsible for any direct, indirect,
               incidental, or consequential damages arising from the use of our
               website or products.
             </p>
@@ -73,7 +73,7 @@ function Disclaimer() {
         <div className="disclaimer-card">
           <h2>📝 Changes to This Disclaimer</h2>
           <p>
-            ShopNest reserves the right to update or modify this Disclaimer at
+            NovaCart reserves the right to update or modify this Disclaimer at
             any time without prior notice. Continued use of the website after
             changes indicates your acceptance of the revised terms.
           </p>

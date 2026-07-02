@@ -65,7 +65,7 @@ function Return() {
           <p>
             Customers may be responsible for return shipping charges unless the
             return is due to a damaged, defective, or incorrect item delivered
-            by ShopNest.
+            by NovaCart.
           </p>
         </div>
 

@@ -36,7 +36,7 @@ export const registerUser = async (req, res) => {
     await newUser.save();
 
     const message = `
-      Welcome to ShopNest, ${name}!
+      Welcome to NovaCart, ${name}!
 
       Your OTP for account registration is: ${otp}
 
@@ -44,12 +44,12 @@ export const registerUser = async (req, res) => {
       Please do not share this OTP with anyone.
 
       Thank you,
-      ShopNest Team
+      NovaCart Team
       `;
 
     await sendEmail(
       email,
-      "Welcome to ShopNest - Your OTP for registration",
+      "Welcome to NovaCart - Your OTP for registration",
       message,
     );
 
