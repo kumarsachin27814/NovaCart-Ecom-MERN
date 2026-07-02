@@ -1,4 +1,4 @@
 .env
 node_modules/
 uploads/
-seed.js
+backend/seed.js
