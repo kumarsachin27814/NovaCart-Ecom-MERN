@@ -36,7 +36,7 @@ const AddProduct = () => {
 
     try {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL}/products`,
+        "https://novacart-ecom-mern.onrender.com/api/products",
         {
           method: "POST",
           headers: { Authorization: `Bearer ${user.token}` },

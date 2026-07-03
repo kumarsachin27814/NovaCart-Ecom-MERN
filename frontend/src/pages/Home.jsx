@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
      const fetchProducts = async () => {
        try {
-         const res = await fetch(`${process.env.REACT_APP_API_URL}/products`);
+         const res = await fetch("https://novacart-ecom-mern.onrender.com/api/products");
          const data = await res.json();
          setProducts([...data].reverse());
        } catch (error) {

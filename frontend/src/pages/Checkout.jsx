@@ -103,19 +103,22 @@ const Checkout = () => {
   // };
 
   const bypassPayment = async () => {
-    const saveOrderRes = await fetch(`${process.env.REACT_APP_API_URL}/orders` , {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${user.token}`,
+    const saveOrderRes = await fetch(
+      "https://novacart-ecom-mern.onrender.com/api/orders",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+        body: JSON.stringify({
+          items: cartItems,
+          totalAmount: totalPrice,
+          address,
+          paymentId: "bypass_txn_" + Date.now(),
+        }),
       },
-      body: JSON.stringify({
-        items: cartItems,
-        totalAmount: totalPrice,
-        address,
-        paymentId: "bypass_txn_" + Date.now(),
-      }),
-    });
+    );
     if (saveOrderRes.ok) {
       dispatch(clearCart());
       navigate("/ordersuccess");

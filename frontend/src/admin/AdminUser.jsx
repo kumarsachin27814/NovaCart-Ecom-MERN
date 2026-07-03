@@ -7,9 +7,12 @@ const AdminUsers = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/users`, {
-        headers: { Authorization: `Bearer ${user.token}` },
-      });
+      const res = await fetch(
+        "https://novacart-ecom-mern.onrender.com/api/auth/users",
+        {
+          headers: { Authorization: `Bearer ${user.token}` },
+        },
+      );
       const data = await res.json();
       setUsers(Array.isArray(data) ? data : []);
     };

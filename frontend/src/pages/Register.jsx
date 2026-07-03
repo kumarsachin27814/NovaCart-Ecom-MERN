@@ -14,7 +14,7 @@ function Register() {
 
     try {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL}/auth/register`,
+        "https://novacart-ecom-mern.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {

@@ -7,7 +7,7 @@ const AdminOrders = () => {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/orders`, {
+      const res = await fetch("https://novacart-ecom-mern.onrender.com/api/orders", {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       const data = await res.json();
@@ -18,7 +18,7 @@ const AdminOrders = () => {
 
   const updateStatus = async (id, status) => {
     const res = await fetch(
-      `${process.env.REACT_APP_API_URL}/orders/${id}/status`,
+      `https://novacart-ecom-mern.onrender.com/api/orders/${id}/status`,
       {
         method: "PUT",
         headers: {

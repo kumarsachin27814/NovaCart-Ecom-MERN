@@ -11,7 +11,7 @@ const Shop = () => {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          `${process.env.REACT_APP_API_URL}/products`,
+          "https://novacart-ecom-mern.onrender.com/api/products",
         );
         const data = await res.json();
         setProducts([...data].reverse());

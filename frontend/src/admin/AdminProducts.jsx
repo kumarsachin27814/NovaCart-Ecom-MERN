@@ -8,7 +8,9 @@ const AdminProducts = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/products`);
+      const res = await fetch(
+        "https://novacart-ecom-mern.onrender.com/api/products",
+      );
       const data = await res.json();
       setProducts(Array.isArray(data) ? data : []);
     };
@@ -18,7 +20,7 @@ const AdminProducts = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you strictly sure you want to delete this?")) {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL}/products/${id}`,
+        `https://novacart-ecom-mern.onrender.com/api/products/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${user.token}` },
