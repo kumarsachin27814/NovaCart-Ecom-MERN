@@ -10,7 +10,9 @@ const Shop = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("/api/products");
+        const res = await fetch(
+          `${process.env.REACT_APP_API_URL}/products`,
+        );
         const data = await res.json();
         setProducts([...data].reverse());
       } catch (error) {

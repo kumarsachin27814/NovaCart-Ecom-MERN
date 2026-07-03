@@ -13,7 +13,7 @@ function VerifyOtp() {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/auth/verify-otp", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/verify-otp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -33,18 +33,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 
-// Serve frontend in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/build')));
-  
-  app.use((req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
-  });
-} else {
-  app.get('/', (req, res) => {
-    res.send("NovaCart API is running in Development mode...");
-  });
-}
+
 
 
 const PORT = process.env.PORT || 5000 ;

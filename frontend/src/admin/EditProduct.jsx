@@ -19,7 +19,9 @@ const EditProduct = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const res = await fetch(`/api/products/${id}`);
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}/products/${id}`,
+      );
       const data = await res.json();
       setFormData({
         name: data.name,
@@ -43,7 +45,7 @@ const EditProduct = () => {
     data.append("stock", formData.stock);
     if (image) data.append("image", image);
 
-    const res = await fetch(`/api/products/${id}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/products/${id}`, {
       method: "PUT",
       headers: { Authorization: `Bearer ${user.token}` },
       body: data,
