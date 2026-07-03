@@ -35,7 +35,7 @@ function Register() {
 
         navigate("/verify-otp", {
           state: {
-            email: data.email,
+            email, // ✅ FIX 1: data.email hata diya, direct email use
           },
         });
       } else {
