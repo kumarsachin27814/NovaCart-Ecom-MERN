@@ -14,8 +14,8 @@ const sendEmail = async (to, subject, text) => {
     });
 
     // optional but important check
-    await transporter.verify();
-    console.log("SMTP connection successful");
+    // await transporter.verify();
+    // console.log("SMTP connection successful");
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
