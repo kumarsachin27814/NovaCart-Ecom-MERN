@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { clearCart } from "../redux/cartSlice";
+import API_URL from "../config";
 
 const Checkout = () => {
   const { user } = useContext(AuthContext);
@@ -103,7 +104,7 @@ const Checkout = () => {
   // };
 
   const bypassPayment = async () => {
-    const saveOrderRes = await fetch("http://localhost:5000/api/orders", {
+    const saveOrderRes = await fetch(`${API_URL}/api/orders`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

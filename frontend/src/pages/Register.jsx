@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/auth.css";
+import API_URL from "../config";
 
 function Register() {
   const [name, setName] = useState("");
@@ -11,39 +12,25 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      console.log("Sending:", {
-        name,
-        email,
-        password,
-      });
-      const res = await fetch(
-        "http://localhost:5000/api/auth/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            password,
-          }),
+      const res = await fetch(`${API_URL}/api/auth/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+        }),
+      });
 
       const data = await res.json();
 
-
-
       if (res.ok) {
-        alert("OTP sent to your email.");
-
-        navigate("/verify-otp", {
-          state: {
-            email, // ✅ FIX 1: data.email hata diya, direct email use
-          },
-        });
+        alert("Registration successful.");
+        navigate("/login");
       } else {
         alert(data.message);
       }
