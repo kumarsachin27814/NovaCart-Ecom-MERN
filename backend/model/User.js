@@ -19,12 +19,6 @@ const userSchema = new mongoose.Schema({
     enum: ["user", "admin"],
     default: "user",
   },
-  verified: {
-    type: Boolean,
-    default: false,
-  },
-  otp: String,
-  otpExpire: Date,
 });
 
 export default mongoose.model("User", userSchema);
