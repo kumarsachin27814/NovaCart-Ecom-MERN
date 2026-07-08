@@ -46,7 +46,6 @@ export const registerUser = async (req, res) => {
       Thank you,
       NovaCart Team
       `;
-
     await sendEmail(
       email,
       "Welcome to NovaCart - Your OTP for registration",

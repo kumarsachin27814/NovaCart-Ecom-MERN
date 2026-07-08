@@ -11,10 +11,14 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
+      console.log("Sending:", {
+        name,
+        email,
+        password,
+      });
       const res = await fetch(
-        "https://novacart-ecom-mern.onrender.com/api/auth/register",
+        "http://localhost:5000/api/auth/register",
         {
           method: "POST",
           headers: {
@@ -29,6 +33,8 @@ function Register() {
       );
 
       const data = await res.json();
+
+
 
       if (res.ok) {
         alert("OTP sent to your email.");

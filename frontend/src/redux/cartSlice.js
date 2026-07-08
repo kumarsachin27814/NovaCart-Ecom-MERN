@@ -1,15 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  //Browser ke localStorage me check karta hai ki "cartItems" naam ka data hai ya nahi.
   cartItems: localStorage.getItem("cartItems")
     ? JSON.parse(localStorage.getItem("cartItems"))
     : [],
 };
 
+
+//Redux Toolkit ka function. Ye ek slice banata hai
+// Cart se related pura logic.
 const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState, // Redux store me start me ye value jayegi.
+
   reducers: {
+    // State ko update karne wale functions.
     addToCart: (state, action) => {
       const item = action.payload;
       const existItem = state.cartItems.find(

@@ -15,12 +15,9 @@ const AdminDashboard = () => {
 
     const fetchStats = async () => {
       try {
-        const res = await fetch(
-          "https://novacart-ecom-mern.onrender.com/api/analytics" ,
-          {
-            headers: { Authorization: `Bearer ${user.token}` },
-          },
-        );
+        const res = await fetch("http://localhost:5000/api/analytics", {
+          headers: { Authorization: `Bearer ${user.token}` },
+        });
         const data = await res.json();
         if (res.ok) {
           setStats(data);

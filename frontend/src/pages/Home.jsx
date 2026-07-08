@@ -8,8 +8,8 @@ const Home = () => {
   useEffect(() => {
      const fetchProducts = async () => {
        try {
-         const res = await fetch("https://novacart-ecom-mern.onrender.com/api/products");
-         const data = await res.json();
+         const res = await fetch("http://localhost:5000/api/products");
+         const data = await res.json(); // array me convert kar diya
          setProducts([...data].reverse());
        } catch (error) {
          console.error(error);
@@ -35,7 +35,7 @@ const Home = () => {
       ) : (
         <div className="product-grid">
           {products.map((product) => (
-            <ProductCard key={product._id} product={product} />
+            <ProductCard key={product._id} product={product} /> // React ko batana padta hai ki list me har item unique kaunsa hai.
           ))}
         </div>
       )}

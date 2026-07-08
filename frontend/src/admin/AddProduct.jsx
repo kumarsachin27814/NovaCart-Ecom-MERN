@@ -35,14 +35,11 @@ const AddProduct = () => {
     data.append("image", image);
 
     try {
-      const res = await fetch(
-        "https://novacart-ecom-mern.onrender.com/api/products",
-        {
-          method: "POST",
-          headers: { Authorization: `Bearer ${user.token}` },
-          body: data,
-        },
-      );
+      const res = await fetch("http://localhost:5000/api/products", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${user.token}` },
+        body: data,
+      });
       const responseData = await res.json();
 
       if (res.ok) {

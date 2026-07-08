@@ -7,7 +7,7 @@ const AdminOrders = () => {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const res = await fetch("https://novacart-ecom-mern.onrender.com/api/orders", {
+      const res = await fetch("http://localhost:5000/api/orders", {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       const data = await res.json();
@@ -17,17 +17,14 @@ const AdminOrders = () => {
   }, [user]);
 
   const updateStatus = async (id, status) => {
-    const res = await fetch(
-      `https://novacart-ecom-mern.onrender.com/api/orders/${id}/status`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${user.token}`,
-        },
-        body: JSON.stringify({ status }),
+    const res = await fetch(`http://localhost:5000/api/orders/${id}/status`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
       },
-    );
+      body: JSON.stringify({ status }),
+    });
     if (res.ok) {
       setOrders(
         orders.map((order) =>

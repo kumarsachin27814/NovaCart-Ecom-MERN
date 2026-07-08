@@ -1,25 +1,38 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
-const sendEmail = async (to , subject , text) => {
+const sendEmail = async (to, subject, text) => {
+
   try {
-    // transport ek postman h jo email bhejta h 
     const transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-      }
+        pass: process.env.EMAIL_PASS,
+      },
     });
+
+    // optional but important check
+    await transporter.verify();
+    console.log("SMTP connection successful");
+
     const mailOptions = {
-      from : process.env.EMAIL_USER,
+      from: process.env.EMAIL_USER,
       to,
       subject,
-      text
+      text,
     };
-    await transporter.sendMail(mailOptions); // internally gamil server ko request bhejta h 
+
+    const info = await transporter.sendMail(mailOptions);
+
+    console.log("Email sent successfully:", info.messageId);
+
+    return info;
   } catch (error) {
-    console.log('Error sending email:',error)
+    console.log("❌ Error sending email:", error);
+
+    // important: error ko upar bhejo (debug ke liye)
+    throw error;
   }
-}
+};
 
 export default sendEmail;
