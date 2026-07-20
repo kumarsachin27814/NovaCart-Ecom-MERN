@@ -109,3 +109,81 @@
     padding: 24px;
   }
 }
+
+
+/* ===========================
+   RETURN PAGE LIGHT THEME
+=========================== */
+
+html.light .return-page {
+  background: #ffffff;
+  color: #111827;
+}
+
+
+/* Hero */
+html.light .return-hero {
+  background: linear-gradient(
+    180deg,
+    rgba(249, 115, 22, 0.12),
+    transparent
+  );
+}
+
+
+html.light .return-hero h1 {
+  color: #111827;
+}
+
+
+html.light .return-hero p {
+  color: #4b5563;
+}
+
+
+/* Container Cards */
+html.light .return-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+html.light .return-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 10px 35px rgba(249,115,22,.15);
+}
+
+
+html.light .return-card h2 {
+  color: #f97316;
+}
+
+
+html.light .return-card p {
+  color: #4b5563;
+}
+
+
+/* Policy Cards */
+html.light .policy-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+html.light .policy-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 10px 30px rgba(249,115,22,.15);
+}
+
+
+html.light .policy-card h3 {
+  color: #f97316;
+}
+
+
+html.light .policy-card li {
+  color: #4b5563;
+}

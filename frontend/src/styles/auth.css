@@ -226,3 +226,76 @@
   }
 
 }
+
+
+
+
+
+/* ===========================
+   AUTH LIGHT THEME
+=========================== */
+
+html.light .auth-container {
+  background: #f8fafc;
+}
+
+
+/* Auth Card */
+html.light .auth-form {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+
+
+html.light .auth-form:hover {
+  border-color: rgba(249,115,22,.35);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.15),
+    0 0 30px rgba(249,115,22,.15);
+}
+
+
+/* Title */
+html.light .auth-form h2 {
+  color: #111827;
+}
+
+
+/* Input */
+html.light .auth-form input {
+  background: #f8fafc;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+
+html.light .auth-form input::placeholder {
+  color: #6b7280;
+}
+
+
+html.light .auth-form input:focus {
+  border-color: #f97316;
+
+  box-shadow:
+    0 0 0 3px rgba(249,115,22,.15),
+    0 0 18px rgba(249,115,22,.15);
+}
+
+
+/* Bottom Text */
+html.light .auth-form p {
+  color: #4b5563;
+}
+
+
+html.light .auth-form p a {
+  color: #f97316;
+}
+
+
+html.light .auth-form p a:hover {
+  color: #ea580c;
+}

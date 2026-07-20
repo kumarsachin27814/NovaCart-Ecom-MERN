@@ -115,3 +115,87 @@
     padding: 24px;
   }
 }
+
+
+/* ===========================
+   ABOUT LIGHT THEME
+=========================== */
+
+html.light .about-page {
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+
+/* Hero */
+html.light .about-hero {
+  background: linear-gradient(
+    180deg,
+    rgba(249, 115, 22, 0.12),
+    transparent
+  );
+}
+
+
+html.light .about-hero h1 {
+  color: #111827;
+}
+
+
+html.light .about-hero p {
+  color: #4b5563;
+}
+
+
+/* About Cards */
+html.light .about-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+html.light .about-card:hover {
+  border-color: rgba(249,115,22,.5);
+  box-shadow: 0 10px 35px rgba(249,115,22,.15);
+}
+
+
+html.light .about-card h2 {
+  color: #f97316;
+}
+
+
+html.light .about-card p {
+  color: #4b5563;
+}
+
+
+html.light .about-card li {
+  color: #374151;
+  border-bottom-color: #e5e7eb;
+}
+
+
+/* Info Cards */
+html.light .info-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+html.light .info-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 10px 30px rgba(249,115,22,.15);
+}
+
+
+html.light .info-card h3 {
+  color: #f97316;
+}
+
+
+html.light .info-card p {
+  color: #4b5563;
+}

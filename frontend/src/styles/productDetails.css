@@ -128,3 +128,49 @@
 .out-stock {
   color: #ef4444;
 }
+
+
+
+/* ===========================
+   PRODUCT DETAIL LIGHT MODE
+=========================== */
+
+html.light .product-detail {
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+html.light .detail-image {
+  background:#f1f5f9;
+}
+
+html.light .detail-info h2,
+html.light .detail-info h4 {
+  color:#111827;
+}
+
+html.light .detail-info p,
+html.light .detail-description p {
+  color:#4b5563;
+}
+
+html.light .detail-price {
+  color:#f97316;
+}
+
+html.light .breadcrumb {
+  color:#6b7280;
+}
+
+html.light .breadcrumb a {
+  color:#f97316;
+}
+
+html.light .in-stock {
+  color:#059669;
+}
+
+html.light .out-stock {
+  color:#dc2626;
+}

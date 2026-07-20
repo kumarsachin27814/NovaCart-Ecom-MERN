@@ -104,3 +104,82 @@
     padding: 24px;
   }
 }
+
+
+
+/* ===========================
+   DISCLAIMER LIGHT THEME
+=========================== */
+
+html.light .disclaimer-page {
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+
+/* Hero */
+html.light .disclaimer-hero {
+  background: linear-gradient(
+    180deg,
+    rgba(249, 115, 22, 0.12),
+    transparent
+  );
+}
+
+
+html.light .disclaimer-hero h1 {
+  color: #111827;
+}
+
+
+html.light .disclaimer-hero p {
+  color: #4b5563;
+}
+
+
+/* Main Cards */
+html.light .disclaimer-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+html.light .disclaimer-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 10px 35px rgba(249,115,22,0.15);
+}
+
+
+html.light .disclaimer-card h2 {
+  color: #f97316;
+}
+
+
+html.light .disclaimer-card p {
+  color: #4b5563;
+}
+
+
+/* Info Cards */
+html.light .info-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+html.light .info-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 10px 30px rgba(249,115,22,0.15);
+}
+
+
+html.light .info-card h3 {
+  color: #f97316;
+}
+
+
+html.light .info-card p {
+  color: #4b5563;
+}

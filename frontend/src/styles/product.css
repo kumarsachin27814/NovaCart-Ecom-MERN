@@ -359,4 +359,100 @@
 
 .view-details-button:hover::after {
   transform: translateX(6px);
+
+}
+
+
+
+
+/* ===========================
+   LIGHT MODE - SHOP / PRODUCT PAGE
+=========================== */
+
+html.light-mode .hero-banner {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(249,115,22,.18),
+      transparent 60%
+    ),
+    #ffffff;
+
+  color:#111827;
+  border:1px solid #e5e7eb;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+html.light-mode .hero-banner h1 {
+  color:#111827;
+}
+
+html.light-mode .hero-banner p {
+  color:#4b5563;
+}
+
+
+/* Search */
+
+html.light-mode .search-bar {
+  background:#ffffff;
+  color:#111827;
+  border:1px solid #d1d5db;
+}
+
+html.light-mode .search-bar::placeholder {
+  color:#6b7280;
+}
+
+
+/* Product Card */
+
+html.light-mode .product-card {
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+html.light-mode .product-info h3 {
+  color:#111827;
+}
+
+html.light-mode .product-card:hover {
+  border-color:#f97316;
+  box-shadow:0 15px 35px rgba(249,115,22,.15);
+}
+
+
+/* ===========================
+   PRODUCT LIGHT THEME
+=========================== */
+
+html.light .product-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+html.light .product-info h3 {
+  color: #111827;
+}
+
+html.light .product-price,
+html.light .price {
+  color: #f97316;
+}
+
+html.light .hero-banner {
+  background: #ffffff;
+  color: #111827;
+}
+
+html.light .hero-banner p {
+  color: #4b5563;
+}
+
+html.light .search-bar {
+  background: #ffffff;
+  color: #111827;
+  border-color: #d1d5db;
 }

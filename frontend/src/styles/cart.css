@@ -171,3 +171,109 @@
     flex-direction: column;
   }
 }
+
+
+
+
+
+
+/* ===========================
+   CART LIGHT THEME
+=========================== */
+
+html.light .cart-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+
+html.light .cart-item:hover {
+  border-color: rgba(249,115,22,0.4);
+  box-shadow: 0 10px 25px rgba(249,115,22,0.12);
+}
+
+
+/* Item Details */
+html.light .cart-item-details h4 {
+  color: #111827;
+}
+
+
+/* Quantity Buttons */
+html.light .qty-controls button {
+  background: #e5e7eb;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+
+html.light .qty-controls button:hover {
+  background: #f97316;
+  color: #fff;
+  border-color: #f97316;
+}
+
+
+/* Remove Button */
+html.light .btn-remove {
+  background: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+
+html.light .btn-remove:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+
+/* Cart Summary */
+html.light .cart-summary {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+
+html.light .cart-summary h3 {
+  color: #111827;
+  border-bottom-color: #e5e7eb;
+}
+
+
+/* Checkout Page */
+html.light .checkout-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+html.light .shipping-form input {
+  background: #f8fafc;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+
+html.light .shipping-form input::placeholder {
+  color: #6b7280;
+}
+
+
+html.light .shipping-form input:focus {
+  border-color: #f97316;
+}
+
+
+/* Checkout Summary */
+html.light .checkout-summary {
+  border-top-color: #e5e7eb;
+}
+
+
+html.light .checkout-summary h4 {
+  color: #f97316;
+}

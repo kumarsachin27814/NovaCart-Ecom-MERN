@@ -15,15 +15,3 @@ export default store;
 
 
 
-
-/* cart = state ka key
-cartReducer = us key ka reducer
-
-Isliye jab tum data nikalte ho to likhte ho:
-
-const cartItems = useSelector((state) => state.cart.cartItems);
-
-Dhyan do:
-
-Pehla cart → store ka key
-Dusra cartItems → reducer ke andar ki property */
