@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
+import {useNavigate } from "react-router-dom";
 import "../styles/productDetails.css";
 import API_URL from "../config";
 
@@ -10,6 +11,7 @@ function ProductDetails() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -39,9 +41,11 @@ function ProductDetails() {
           qty: 1,
         }),
       );
-
+      navigate("/cart");
       alert("Successfully added to your cart!");
+
     }
+
   };
 
   if (loading) {
