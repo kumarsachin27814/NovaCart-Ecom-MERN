@@ -1,79 +1,241 @@
 .footer {
   background: #09090b;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  padding: 40px 20px;
-  margin-top: auto;
+  color: #fff;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,.08);
 }
-
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  max-width: 1300px;
+  margin: auto;
+  padding: 60px 25px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 40px;
 }
 
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+}
 
 .footer-title {
   color: #f97316;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 18px;
 }
 
-
-.footer-text {
-  color: #a1a1aa;
-  font-size: 0.9rem;
+.footer-description {
+  color: #b3b3b3;
+  line-height: 1.8;
 }
 
+/* ===========================
+   FOOTER LINKS
+=========================== */
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 14px;
 }
-
 
 .footer-links a {
-  color: #a1a1aa;
-  font-size: 0.9rem;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  color: #b3b3b3;
   text-decoration: none;
+  transition: color .3s ease;
 }
 
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #f97316;
+  transition: width .35s ease;
+}
 
 .footer-links a:hover {
   color: #f97316;
 }
 
-
-
-
-
-
-
+.footer-links a:hover::after {
+  width: 100%;
+}
 
 /* ===========================
-   FOOTER LIGHT THEME
+   CONTACT
+=========================== */
+
+.footer-section p {
+  color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* ===========================
+   SOCIAL LINKS
+=========================== */
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #18181b;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all .35s ease;
+}
+
+.social-links a:hover {
+  background: #f97316;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(249,115,22,.35);
+}
+
+/* ===========================
+   FOOTER BOTTOM
+=========================== */
+
+.footer-bottom {
+  text-align: center;
+  padding: 22px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #9ca3af;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:992px) {
+  .footer-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-section p {
+    justify-content: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-title {
+    font-size: 1.8rem;
+  }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:480px) {
+
+  .footer {
+    margin-top: 60px;
+  }
+
+  .footer-container {
+    padding: 45px 18px 30px;
+    gap: 30px;
+  }
+
+  .footer-title {
+    font-size: 1.6rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-description {
+    font-size: .95rem;
+  }
+
+  .social-links a {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+}
+
+/* ===========================
+   LIGHT THEME
 =========================== */
 
 html.light .footer {
-  background: #ffffff;
+  background: #fff;
   border-top: 1px solid #e5e7eb;
 }
 
+html.light .footer-section h3,
+html.light .footer-bottom {
+  color: #111827;
+}
 
-html.light .footer-text,
+html.light .footer-description,
+html.light .footer-section p,
 html.light .footer-links a {
   color: #4b5563;
 }
-
 
 html.light .footer-links a:hover {
   color: #f97316;
 }
 
+html.light .footer-links a::after {
+  background: #f97316;
+}
 
-html.light .footer-title {
-  color: #f97316;
+html.light .social-links a {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+html.light .social-links a:hover {
+  background: #f97316;
+  color: #fff;
+}
+
+html.light .footer-bottom {
+  color: #111827;
+  border-top: 1px solid #e5e7eb;
 }

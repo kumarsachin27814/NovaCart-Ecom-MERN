@@ -8,7 +8,10 @@ export const AuthContext = createContext();
 // Yani AuthProvider ke andar jitne bhi components hain, sab children kehlate hain
 // AuthProvider ek wrapper component hai jo poore app ko authentication data provide karega.
 export const AuthProvider = ({ children }) => {
-  const [user , setUser] = useState(null);
+  const [user , setUser] = useState(() => {
+    const savedInfo = localStorage.getItem("userInfo");
+     return savedInfo ? JSON.parse(savedInfo) : null;
+  });
 
   const login = (userData) => {
     setUser(userData);

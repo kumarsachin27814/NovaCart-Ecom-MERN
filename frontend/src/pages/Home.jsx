@@ -6,6 +6,8 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading , setLoading] = useState(true);
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   useEffect(() => {
      const fetchProducts = async () => {
        try {
@@ -22,11 +24,39 @@ const Home = () => {
     fetchProducts();
   }, []);
 
+
+
+
+  const latestProducts = products.slice(0, 5);
+  const currentProduct = latestProducts[currentSlide];
+
+  useEffect(() => {
+    if (latestProducts.length === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % latestProducts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [latestProducts.length]);
+
   return (
     <div className="home-container">
       <div className="hero-banner">
         <h1>Welcome to NovaCart</h1>
         <p>Discover the best products at unbeatable prices.</p>
+      </div>
+
+      <div className="hero-banner-video">
+        <video src="/vedio/novaCart.mp4" autoPlay loop muted playsInline />
+      </div>
+
+      <div className="latest-product-slider">
+        {currentProduct && (
+          <div className="hero-latest-product">
+            <img src={currentProduct.imageUrl} alt={currentProduct.name} />
+          </div>
+        )}
       </div>
 
       <h2>Featured Products</h2>
