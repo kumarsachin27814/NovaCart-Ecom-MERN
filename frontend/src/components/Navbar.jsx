@@ -107,11 +107,15 @@ function Navbar() {
                 Hii, {user.name}
               </Link>
             </li>
-            {user.role === "admin onClick={() => setMenuOpen(false)}" && (
+
+            {user.role === "admin" && (
               <li>
-                <Link to="/admin">Admin</Link>
+                <Link to="/admin" onClick={() => setMenuOpen(false)}>
+                  Admin
+                </Link>
               </li>
             )}
+
             <li>
               <button onClick={handlerLogout} className="btn-logout">
                 Logout
