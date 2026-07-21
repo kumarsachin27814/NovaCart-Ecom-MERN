@@ -36,9 +36,17 @@ function Navbar() {
 
 
 
+  const toggleHandler = () => {
+      setDarkMode(!darkMode);
+      setMenuOpen(false)
+  }
+
+
+
   const handlerLogout = () => {
     logout();
     navigate("/login");
+    setMenuOpen(false);
   };
   return (
     <nav className="navbar">
@@ -74,7 +82,7 @@ function Navbar() {
               type="checkbox"
               id="checkbox"
               checked={!darkMode}
-              onChange={() => setDarkMode(!darkMode)}
+              onChange={toggleHandler}
             />
 
             <label htmlFor="checkbox" className="toggle-label">
@@ -88,14 +96,18 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/cart">Cart ({cartItems.length})</Link>
+          <Link to="/cart" onClick={() => setMenuOpen(false)}>
+            Cart ({cartItems.length})
+          </Link>
         </li>
         {user ? (
           <>
             <li>
-              <Link to="/profile">Hii, {user.name}</Link>
+              <Link to="/profile" onClick={() => setMenuOpen(false)}>
+                Hii, {user.name}
+              </Link>
             </li>
-            {user.role === "admin" && (
+            {user.role === "admin onClick={() => setMenuOpen(false)}" && (
               <li>
                 <Link to="/admin">Admin</Link>
               </li>
@@ -108,7 +120,9 @@ function Navbar() {
           </>
         ) : (
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/login" onClick={() => setMenuOpen(false)}>
+              Login
+            </Link>
           </li>
         )}
       </ul>

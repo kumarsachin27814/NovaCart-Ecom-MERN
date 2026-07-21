@@ -45,10 +45,10 @@ function Footer() {
           <h3>Contact</h3>
 
           <p>
-            <FaEnvelope /> yourmail@gmail.com
+            <FaEnvelope /> kumarsachin27814@gmail.com
           </p>
           <p>
-            <FaPhone /> +91 XXXXXXXXXX
+            <FaPhone /> +91 6207473835
           </p>
           <p>
             <FaLocationDot /> Bhopal, India
